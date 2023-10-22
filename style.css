@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(63, 0, 139);
+}
+
+h1 {
+  text-align: center;
+  margin: 4% auto 2%;
+  font-size: 2.1rem;
+  color: white;
+}
+
+form {
+  width: 90%;
+  max-width: 500px;
+  height: 50px;
+  margin: 10px auto;
+  background-color: rgb(85, 17, 167);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  color: white;
+  padding: 0 15px;
+}
+
+form input::placeholder {
+  color: white;
+}
+
+form #submit-btn {
+  border: none;
+  outline: none;
+  background-color: rgb(235 3 65);
+  color: white;
+  height: 100%;
+  width: 20%;
+  cursor: pointer;
+}
+
+#search-more {
+  border: none;
+  outline: none;
+  background-color: rgb(235 3 65);
+  color: white;
+  cursor: pointer;
+  margin: 20px auto;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  border-radius: 6px;
+  display: none;
+}
+
+#search-result {
+  width: 80%;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 35px;
+}
+
+#search-result img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (min-width:600px) and (max-width: 1000px){
+    #search-result {
+        grid-template-columns: 1fr 1fr;
+      }
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+  }
+
+  form input {
+    width: 75%;
+  }
+
+  form #submit-btn {
+    width: 25%;
+  }
+
+  #search-result {
+    grid-template-columns: 1fr;
+  }
+}
